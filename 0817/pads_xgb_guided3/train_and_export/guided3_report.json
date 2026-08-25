@@ -1,0 +1,19 @@
+{
+  "model": "pads-guided3-xgb-20260818",
+  "purpose": "Replaces the guided CMPI 0.40/0.40/0.20 hand-weighting with an XGBoost that fuses the tasks",
+  "tasks": ["Relaxed (rest)","StretchHold (posture)","PointFinger (tap)"],
+  "features": "28 = rest rich 12 + posture rich 12 + tap 4",
+  "validation_subject_wise_5fold": {
+    "PD_vs_HC": {"auc": 0.794, "shuffle_leak_6x": 0.549},
+    "PD_vs_ET": {"auc": 0.817, "shuffle_leak_6x": 0.494}
+  },
+  "hyperparams": {"max_depth":3,"eta":0.05,"n_estimators":250,"min_child_weight":3,"tree_method":"exact"},
+  "c_export_prob_err": {"HC": 1.9e-07, "ET": 4.0e-04},
+  "deploy_limitations": [
+    "tap: the device tap test only stores tap times/amplitudes, no continuous acceleration spectrum -> the 4 tap features are median-imputed on-device (effectively equal to rest+posture ~0.78)",
+    "Lower than the deployed LiftHold single-task XGBoost (0.845): LiftHold is this device strongest single task",
+    "Sampling rate: the device 200Hz is decimated to 100Hz to align with PADS training; gyro deg/s->rad/s aligned",
+    "domain gap not re-validated on the device own measured data",
+    "Research screening, not a diagnosis"
+  ]
+}

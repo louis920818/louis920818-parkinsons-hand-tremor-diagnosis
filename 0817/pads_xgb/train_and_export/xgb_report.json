@@ -1,0 +1,103 @@
+{
+  "pairs": {
+    "PD vs Healthy": {
+      "n": 355,
+      "pos": 276,
+      "neg": 79,
+      "RF": [
+        0.8644256787745368,
+        0.00607641704095394
+      ],
+      "XGB": [
+        0.8657987066593285,
+        0.00984380139324797
+      ],
+      "null_mean": 0.5044831223628692,
+      "null_max": 0.5606081452944414
+    },
+    "PD vs Essential Tremor": {
+      "n": 304,
+      "pos": 276,
+      "neg": 28,
+      "RF": [
+        0.9059750258799172,
+        0.011680317523601231
+      ],
+      "XGB": [
+        0.8902853260869565,
+        0.017837492082799198
+      ],
+      "null_mean": 0.5374288302277433,
+      "null_max": 0.6345755693581782
+    }
+  },
+  "features": [
+    "Relaxed_peak",
+    "Relaxed_bratio",
+    "Relaxed_bpow",
+    "Relaxed_rms",
+    "Relaxed_grms",
+    "Relaxed_spec_ent",
+    "Relaxed_peak_sharp",
+    "Relaxed_lohi",
+    "Relaxed_g_bratio",
+    "Relaxed_freq_stab",
+    "Relaxed_ac_reg",
+    "Relaxed_jerk",
+    "Relaxed_asym_bpow",
+    "StretchHold_peak",
+    "StretchHold_bratio",
+    "StretchHold_bpow",
+    "StretchHold_rms",
+    "StretchHold_grms",
+    "StretchHold_spec_ent",
+    "StretchHold_peak_sharp",
+    "StretchHold_lohi",
+    "StretchHold_g_bratio",
+    "StretchHold_freq_stab",
+    "StretchHold_ac_reg",
+    "StretchHold_jerk",
+    "StretchHold_asym_bpow",
+    "HoldWeight_bpow",
+    "HoldWeight_bratio",
+    "HoldWeight_spec_ent",
+    "DrinkGlas_bpow",
+    "DrinkGlas_bratio",
+    "DrinkGlas_spec_ent",
+    "rp_bpow",
+    "rp_bratio",
+    "rp_peak",
+    "rest_dom",
+    "ra_bpow",
+    "PointFinger_rep_rate",
+    "PointFinger_rep_reg",
+    "PointFinger_rep_dec",
+    "PointFinger_kin_bratio",
+    "TouchNose_rep_rate",
+    "TouchNose_rep_reg",
+    "TouchNose_rep_dec",
+    "TouchNose_kin_bratio",
+    "rest_vs_kin",
+    "RelaxedTask_bpow",
+    "RelaxedTask_bratio",
+    "RelaxedTask_spec_ent",
+    "RelaxedTask_peak",
+    "LiftHold_bpow",
+    "LiftHold_bratio",
+    "LiftHold_spec_ent",
+    "LiftHold_peak",
+    "CrossArms_bpow",
+    "CrossArms_bratio",
+    "CrossArms_spec_ent",
+    "CrossArms_peak",
+    "TouchIndex_bpow",
+    "TouchIndex_bratio",
+    "TouchIndex_spec_ent",
+    "TouchIndex_peak",
+    "Entrainment_bpow",
+    "Entrainment_bratio",
+    "Entrainment_spec_ent",
+    "Entrainment_peak"
+  ],
+  "feature_count": 66
+}

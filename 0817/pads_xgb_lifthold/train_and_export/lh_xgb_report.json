@@ -1,0 +1,12 @@
+{
+  "model": "pads-lifthold-xgb-20260818",
+  "task": "single LiftHold task, 15 device-side firmware features (fs=200Hz, gyro deg/s)",
+  "validation": "subject-wise StratifiedGroupKFold (5-fold), records=938 (469 subjects x 2 wrists)",
+  "hyperparams": {"max_depth": 2, "eta": 0.05, "n_estimators": 400, "min_child_weight": 5, "subsample": 0.9, "colsample_bytree": 0.9, "tree_method": "exact"},
+  "results": {
+    "PD_vs_HC": {"xgb_auc": 0.845, "deployed_LR_auc": 0.839, "shuffle_leakage_auc": 0.483},
+    "PD_vs_DD": {"xgb_auc": 0.656, "deployed_LR_auc": 0.481, "shuffle_leakage_auc": 0.558}
+  },
+  "c_export": {"prob_err_vs_xgboost": 3.1e-07, "c_vs_xgb_maxerr": 1.19e-07},
+  "note": "XGBoost drop-in replacement for pads_v3 logistic regression in runPadsModel(). Features unchanged. Research screening, not diagnosis; not device-revalidated."
+}
