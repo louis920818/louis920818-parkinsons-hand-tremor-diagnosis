@@ -77,8 +77,16 @@ We built a **wrist-worn device on the MYOSA kit** that measures hand acceleratio
 
 ### Videos
 
+**Demonstration video**
+
 <video controls width="100%">
   <source src="/demo.mp4" type="video/mp4">
+</video>
+
+**Recorded presentation**
+
+<video controls width="100%">
+  <source src="/presentation.mp4" type="video/mp4">
 </video>
 
 ---
